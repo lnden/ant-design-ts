@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #282c34;
+}
+h3 {
+    color: #207f4c;
+}
+input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+button {
+    width: 140px;
+    margin-bottom: 10px;
+}
+img {
+    width: 300px;
+}
+.container {
+    width: 900px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
