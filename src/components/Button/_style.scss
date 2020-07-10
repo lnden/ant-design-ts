@@ -1,0 +1,50 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    color: $body-color;
+    white-space: normal;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    border: $btn-border-width solid transparent;
+    // padding: $btn-padding-y $btn-padding-x;
+    // font-size: $btn-font-size;
+    // border-radius: $border-radius;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+    box-shadow: $btn-box-shadow;
+    cursor: pointer;
+    transition: $btn-transition;
+    // disabled 样式 disabled 属性
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: $btn-disabled-opacity;
+        box-shadow: none;
+        > * {
+            // 设置所有的子元素，不接受鼠标事件
+            pointer-events: none;
+        }
+    }
+}
+.btn-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
+}
+.btn-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $border-radius-sm);
+}
+.btn-primary {
+    @include button-type($white, $primary, $primary);
+}
+.btn-danger {
+    @include button-type($white, $danger, $danger);
+}
+.btn-default {
+    @include button-type($white, $gray-400, $body-color, $white, $primary, $primary);
+}
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $btn-link-color;
+    text-decoration: $link-decoration;
+}
